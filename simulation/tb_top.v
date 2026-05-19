@@ -3,12 +3,12 @@
 module tb_top();
     
     reg clk;
-    wire [31:0] alu_result;
+    wire [31:0] result;
     reg reset;
     datapath dut (
         .clk(clk),
         .reset(reset),
-   .out(alu_result)
+   .out(result)
     );
 
     always #5 clk = ~clk;
